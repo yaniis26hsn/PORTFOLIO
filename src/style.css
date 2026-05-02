@@ -33,7 +33,6 @@ h1{
    
 }
 #Contacts{
-    padding-left: 25px;
     margin-top: 50px;
     background-color: rgb(173, 185, 252);
     justify-content: space-between;
@@ -47,9 +46,7 @@ h1{
 }
 #skills{
     background-color: beige;
-    border: solid rgb(26, 26, 130) 5px;
 }
 #education{
     background-color: beige;
-     border: solid rgb(14, 14, 129) 5px;
 }
