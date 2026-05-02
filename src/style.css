@@ -1,0 +1,55 @@
+body{
+    margin: 20px;
+    background-color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: darkblue;
+}
+h1{
+    color: rgb(42, 108, 165);
+    
+}
+.mapic{
+    width: 150px;
+    margin-right: 50px;
+    border: solid darkblue;
+}
+.card{
+    border: 1px dotted blue;
+    padding: 20px;
+    justify-content: space-around;
+    background-color: rgb(117, 146, 232);
+    width: 400px;
+    display: flex;
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 5px;
+    border-bottom: 5px rgba(255, 192, 203, 0.678) solid;
+}
+.info{
+    display: block;
+    justify-content: center;
+    text-align: center;
+   
+}
+#Contacts{
+    padding-left: 25px;
+    margin-top: 50px;
+    background-color: rgb(173, 185, 252);
+    justify-content: space-between;
+    border: 5px solid rgb(128, 128, 128);
+    border-radius: 4px;
+    
+
+}
+#email{
+    color: white;
+}
+#skills{
+    background-color: beige;
+    border: solid rgb(26, 26, 130) 5px;
+}
+#education{
+    background-color: beige;
+     border: solid rgb(14, 14, 129) 5px;
+}
