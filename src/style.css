@@ -250,6 +250,13 @@ body {
     margin-bottom: 6px;
 }
 
+.hero-desc {
+    font-size: 0.95rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
 .hero-location {
     font-size: 0.875rem;
     color: var(--text-muted);
