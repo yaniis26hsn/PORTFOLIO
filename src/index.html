@@ -1,108 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   
+    <title>Hassaini Yanis | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body >
-    <div class="card">
-     <img src="../images/IMG_20241110_192447.jpg"  class="mapic" alt="my face">
-     <div class="info">
-        <h3>Hassaini Yanis</h3>
-     <p>Enthusiastic Computer Scientist</p>
-     <h4>Bejaia , Algeria</h4>
-     </div>
-     </div>
-     <div id="Contacts">
-      <div class="github"> <h4>To see some of my Personal Projects you can</h4>
-        <a href="https://www.github.com/yaniis26hsn">Visit my GitHub</a>
-        
-      </div>
-      
-        <br>
-        <h4> Contact me :</h4>
-        <a href="https://linkedin.com/in/yanis-hassaini-606783314">LinkedIn</a>
-        <p id="email">yanis.hassaini.work@gmail.com</p>
+<body>
 
-        <a href=""> click here to see my cv (later) </a>
-        
-
-     </div>
-     <div id="skills">
-       <h2> Major Skills :</h2>
-       
-       <h4>Technical Skills :</h4>
-       <ul>
-        <li>Languages:C , C++ , Java , Python , Rust(later) , JavaScript </li>
-        <li>Linux Basics (CLI and bash scripting language)</li>
-        <li> assembly (8086)</li>
-        <li>Problem Solving Skills(leetCode)</li>
-        <li>Game Developement</li>
-        <li>DSA with different implementations (using C)</li>
-        <li>The Html , CSS and JavaScript Stack</li>
-        <li>Advanced JS  (beside using postman) </li>
-        <li>DBMS : MySQL</li>
-        <li>MEN stack : MongoDB,Express.js,node.js</li>
-        <li>Git and Github</li>
-        <li>Advanced OOP (with Java)</li>
-        <li>Learned MERISE Methodology</li>
-        <li>general AI and Maching learning(andrew ng's courses) </li>
-        <li>Fundamentals of Networks</li>
-        <li>Basics of Cybersecurity (to improve later)</li>
-        <li>Conceptual thinking through building projects</li>
-        
-
-        <h4>Acadamic :</h4>
-
-        <ul>
-          <li>Graph theory</li>
-          <li>Computation theory</li>
-          <li>Mathematical analyse / Linear Algebra</li>
-          <li>Probablities / Statistcs</li>
-          <li>Basics of entrepreneurship</li>
-          <li>foundamentals of electronics</li>
-          <li>Opearating Systems</li>
-        </ul>
-       
-        
-        <h4>Languages :</h4>
-        <ul>
-          <li> Arabic </li>
-          <li>Franch</li>
-          <li>English</li>
-          <li>Kabyle</li>
-        </ul>
-        
-       </ul>
-        <h4> Social Skills :</h4>
-       <ul>
-        <li>Networking (later)</li>
-        <li>Collectif work</li>
-        <li>Project managing</li>
-        </ul>
-     </div>
-    <div id="education">
-      <h2>Acadamic acheivments :</h2>
-      <ul>
-        <li>Getting the Baccalauriat certificate with 17/20 </li>
-        <li>Accessing The University of Bejaia by 'Computer Science' field (engineer cycle)</li>
-        <li>Passing the first Year with an average of 14.03/20 </li>
-        <li>currantly : Second Year</li>
-      </ul>
-     
-
-    </div>
-     <div> 
-        <h1>Internships (later)</h1>
-      </div>
-       <div> 
-        <h1>Major projects :  </h1>
-          <h3>Staydar web app  (click here )</h3> 
-          <h3> full chess game engine with differant modes (vs ai or multiplayer) click here</h3>
-          
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">HY</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </body>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="hero-card">
+            <div class="hero-img-wrapper">
+                <img src="../images/IMG_20241110_192447.jpg" alt="Hassaini Yanis" class="hero-img">
+            </div>
+            <div class="hero-info">
+                <h1 class="hero-name">Hassaini Yanis</h1>
+                <p class="hero-title">Enthusiastic Computer Scientist</p>
+                <p class="hero-location"><i class="fas fa-map-marker-alt"></i> Bejaia, Algeria</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="#projects" class="btn btn-outline">View Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="accent-line"></span> Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Technical Skills</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>C, C++, Java, Python, JavaScript</li>
+                        <li>Rust <span class="badge">learning</span></li>
+                        <li>Linux CLI & Bash</li>
+                        <li>Assembly (8086)</li>
+                        <li>Data Structures & Algorithms</li>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>MongoDB, Express.js, Node.js</li>
+                        <li>MySQL</li>
+                        <li>Git & GitHub</li>
+                        <li>Advanced OOP (Java)</li>
+                        <li>MERISE Methodology</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Academic</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Graph Theory</li>
+                        <li>Computation Theory</li>
+                        <li>Mathematical Analysis</li>
+                        <li>Linear Algebra</li>
+                        <li>Probability & Statistics</li>
+                        <li>Operating Systems</li>
+                        <li>Fundamentals of Electronics</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-language"></i>
+                        <h3>Languages</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Arabic <span class="badge">native</span></li>
+                        <li>French <span class="badge">fluent</span></li>
+                        <li>English <span class="badge">fluent</span></li>
+                        <li>Kabyle <span class="badge">native</span></li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-users"></i>
+                        <h3>Social Skills</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Teamwork & Collaboration</li>
+                        <li>Project Management</li>
+                        <li>Problem Solving</li>
+                        <li>Conceptual Thinking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title"><span class="accent-line"></span> Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 — Present</span>
+                        <h3>Computer Science (Engineering Cycle)</h3>
+                        <p>University of Bejaia</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 — 2024</span>
+                        <h3>1st Year Computer Science</h3>
+                        <p>University of Bejaia — Average: 14.03/20</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023</span>
+                        <h3>Baccalaureate Certificate</h3>
+                        <p>Score: 17/20</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="accent-line"></span> Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <h3>Staydar Web App</h3>
+                    <p>A full-stack web application for hotel management and booking.</p>
+                    <div class="project-tags">
+                        <span>MongoDB</span>
+                        <span>Express.js</span>
+                        <span>Node.js</span>
+                    </div>
+                    <a href="https://github.com/yaniis26hsn/STAYDAR-Ekri-Li-" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-chess"></i>
+                    </div>
+                    <h3>Chess Engine</h3>
+                    <p>A full chess game engine with AI opponent and multiplayer modes.</p>
+                    <div class="project-tags">
+                        <span>Java</span>
+                        <span>AI</span>
+                        <span>Multiplayer</span>
+                    </div>
+                    <a href="https://github.com/yaniis26hsn/MiniMaxed-Java-Chess" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title"><span class="accent-line"></span> Contact</h2>
+            <div class="contact-content">
+                <p class="contact-text">Let's connect! Reach out for collaborations, opportunities, or just to say hi.</p>
+                <div class="contact-links">
+                    <a href="mailto:yanis.hassaini.work@gmail.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>yanis.hassaini.work@gmail.com</span>
+                    </a>
+                    <a href="https://github.com/yaniis26hsn" target="_blank" class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <span>github.com/yaniis26hsn</span>
+                    </a>
+                    <a href="https://linkedin.com/in/yanis-hassaini-606783314" target="_blank" class="contact-item">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Hassaini Yanis.</p>
+        </div>
+    </footer>
+
+</body>
 </html>
