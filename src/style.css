@@ -550,6 +550,7 @@ body.menu-open .nav-toggle {
     width: 100%;
     aspect-ratio: 34 / 40;
     object-fit: cover;
+    object-position: center 30%;
     border-radius: 999px 999px 22px 22px;
     border: 1px solid var(--line-2);
     position: relative;
