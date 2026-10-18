@@ -1,0 +1,2 @@
+INSERT INTO BookLoans (ISBN, memberID, borrowDate, returnDate, dueDate) 
+VALUES (97800611, 1, CURDATE(), NULL, DATE_ADD(CURDATE(), INTERVAL 14 DAY));
