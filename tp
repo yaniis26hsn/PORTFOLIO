@@ -1,0 +1,103 @@
+-- ==========================================
+-- CREATION DES TABLES
+-- ==========================================
+
+CREATE TABLE Authors (
+    authorID INT AUTO_INCREMENT PRIMARY KEY,
+    authorName VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    age INT,
+    country VARCHAR(50)
+);
+
+CREATE TABLE Publishers (
+    publisherID INT AUTO_INCREMENT PRIMARY KEY,
+    publisherName VARCHAR(100) NOT NULL,
+    headquartersLocation VARCHAR(100),
+    foundationYear INT,
+    website VARCHAR(150) UNIQUE
+);
+
+CREATE TABLE Books (
+    ISBN INT PRIMARY KEY,
+    title VARCHAR(150) NOT NULL,
+    publisher INT,
+    publicationDate DATE,
+    genre VARCHAR(50),
+    FOREIGN KEY (publisher) REFERENCES Publishers(publisherID)
+);
+
+CREATE TABLE Members (
+    memberID INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    phone VARCHAR(20),
+    address VARCHAR(150)
+);
+
+CREATE TABLE WrittenBy (
+    ISBN INT,
+    authorID INT,
+    PRIMARY KEY (ISBN, authorID),
+    FOREIGN KEY (ISBN) REFERENCES Books(ISBN),
+    FOREIGN KEY (authorID) REFERENCES Authors(authorID)
+);
+
+CREATE TABLE BookLoans (
+    loanID INT AUTO_INCREMENT PRIMARY KEY,
+    ISBN INT, 
+    memberID INT,
+    borrowDate DATE,
+    returnDate DATE,
+    dueDate DATE,
+    FOREIGN KEY (ISBN) REFERENCES Books(ISBN),
+    FOREIGN KEY (memberID) REFERENCES Members(memberID)
+);
+
+-- ==========================================
+-- POPULATION DES TABLES (INSERTIONS)
+-- ==========================================
+
+-- 1. Insertion des Auteurs (Authors)
+INSERT INTO Authors (authorID, authorName, email, age, country) VALUES
+(1, 'Harper Lee', 'harperlee@gmail.com', 89, 'USA'),
+(2, 'George Orwell', 'georgeorwell@gmail.com', 46, 'UK'),
+(3, 'J.R.R. Tolkien', 'tolkien@gmail.com', 81, 'UK');
+
+-- 2. Insertion des Éditeurs (Publishers)
+INSERT INTO Publishers (publisherID, publisherName, headquartersLocation, foundationYear, website) VALUES
+(1, 'Penguin', 'New York, NY', 2014, 'https://www.penguinrandomhouse.com/'),
+(2, 'Random House', 'New York, NY', 1989, 'https://www.penguinrandomhouse.com/'),
+(3, 'HarperCollins', 'New York, NY', 1832, 'https://www.harpercollins.com/'),
+(4, 'Penguin Classics', 'London, UK', 1935, 'https://www.penguin.co.uk/'),
+(5, 'HarperOne', 'San Francisco, CA', 1977, 'https://www.harperone.com/'),
+(6, 'St. Martin''s Press', 'New York, NY', 1952, 'https://us.macmillan.com/'),
+(7, 'Doubleday', 'New York, NY', 1897, 'https://www.penguinrandomhouse.com/');
+
+-- 3. Insertion des Livres (Books)
+INSERT INTO Books (ISBN, title, publisher, publicationDate, genre) VALUES
+(97801424, 'To Kill a Mockingbird', 1, '1960-07-11', 'Fiction'),
+(97800611, '1984', 2, '1949-06-08', 'Science Fiction'),
+(97805479, 'The Hobbit', 3, '1937-09-21', 'Fantasy'),
+(97800629, 'The Push', 2, '2021-01-05', 'Psychological Thriller'),
+(97803582, 'The Silent Patient', 2, '2019-02-05', 'Psychological Thriller'),
+(97803583, 'The Ballad of Songbirds and Snakes', 1, '2020-05-19', 'Dystopian Fiction'),
+(97803584, 'The Midnight Library', 4, '2020-09-29', 'Fiction'),
+(97805931, 'The Testaments', 1, '2019-09-10', 'Dystopian Fiction');
+
+-- 4. Insertion des Membres (Members)
+INSERT INTO Members (memberID, name, email, phone, address) VALUES
+(1, 'John Smith', 'johnsmith@gmail.com', '555-1234', '123 Main St'),
+(2, 'Jane Doe', 'janedoe@gmail.com', '555-5678', '456 Elm St'),
+(3, 'Bob Johnson', 'bobjohnson@gmail.com', '555-9012', '789 Oak St');
+
+-- 5. Insertion dans WrittenBy (Liaison Livres-Auteurs)
+INSERT INTO WrittenBy (ISBN, authorID) VALUES
+(97801424, 1),
+(97800611, 2);
+
+-- 6. Insertion dans BookLoans (Emprunts)
+INSERT INTO BookLoans (loanID, ISBN, memberID, borrowDate, returnDate, dueDate) VALUES
+(1, 97801424, 1, '2023-10-01', '2023-10-08', '2023-10-15'),
+(2, 97800611, 2, '2023-10-02', '2023-10-09', '2023-10-16'),
+(3, 97805479, 3, '2023-10-03', '2023-10-10', '2023-10-17');
