@@ -12,23 +12,6 @@ I'm a Computer Science student at the University of Bejaia (Engineering Cycle), 
 
 ---
 
-## Featured Projects
-
-| Project | Description | Stack |
-|---------|-------------|-------|
-| [Staydar Web App](https://github.com/yaniis26hsn/STAYDAR-Ekri-Li-) | Full-stack hotel management & booking platform | MongoDB, Express.js, Node.js |
-| [Chess Engine](https://github.com/yaniis26hsn/MiniMaxed-Java-Chess) | Chess game engine with AI opponent and multiplayer | Java, Minimax AI |
-
----
-
-## Tech Stack
-
-**Languages:** C, C++, Java, Python, JavaScript, Assembly (8086), Rust (learning)  
-**Web:** HTML, CSS, Node.js, Express.js, MongoDB, MySQL  
-**Tools:** Git, GitHub, Linux CLI, Bash
-
----
-
 ## Contact
 
 - 📧 yanis.hassaini.work@gmail.com
